@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apenas resenha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Cadastro de usuários</h1>
+
+    </header>
+    
+        <main>
+            <section>
+                <form id="CadastroForm">
+                    
+                
+                                <label for="nome">Nome: </label>
+                                <input type="text" name=""
+                                id="nome"
+                                placeholder="Digite seu nome aqui:">
+                                <label for ="email">E-mail:</label>
+                                <input type="email" name="" id="email" placeholder="Digite seu email aqui:">
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="" id="senha" placeholder="Digite sua senha aqui:">
+                                
+                
+                
+                                <button type="submit">ENVIAR</button>
+                                <p id="mensagem"></p>
+                
+                
+                
+                </form>
+            </section>
+        </main>
+
+    <footer>
+        <p>&copy;Criado por pedro</p>
+    </footer>
+    <script>
+        const form = document.getElementById( 'cadastroForm')
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            document.getElementById('mensagem').textContent =
+            "Bem-vindo, " + nome + "! Seu cadastro foi realizado."
+        });
+
+
+    </script>
+</body>
+</html> 
